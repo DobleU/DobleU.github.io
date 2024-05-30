@@ -1,0 +1,133 @@
+
+
+
+/* Estilos específicos de la página */
+.containerPadel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 50px; /* Espacio para el header */
+}
+
+
+
+
+.backgroundPadel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.playerY {
+    position: absolute;
+    width: 40%;
+    transition: transform 2s;
+}
+
+.playerX {
+    position: absolute;
+    width: 30%;
+    transition: transform 2s;
+}
+
+.player1 {
+    top: 50%;
+    left: 100%;
+    transform: translate(25%, -50%);
+}
+
+.player2 {
+    top: 50%;
+    right: 100%;
+    transform: translate(-25%, -40%);
+}
+
+.logoPadel {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 10%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 2s;
+}
+
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    
+    .containerPadel {
+        padding-top: 0px; /* Ajustar el espacio superior para dispositivos móviles */
+        height: 50vh; /* Reducir la altura del contenedor en dispositivos móviles */
+    }
+
+    .backgroundPadel {
+        height: 50vh; /* Reducir la altura de la imagen de fondo */
+    }
+
+    .player1, .player2 {
+        display: none; /* Ocultar las imágenes de los jugadores */
+    }
+
+   .logoPadel {
+        width: 80%; /* Aumentar el tamaño del logo */
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+}
+
+
+.content-banner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .sponsor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+        }
+        .sponsor li {
+            flex: 1 1 auto;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sponsor img {
+            width: 273px;
+            height: 133px;
+        }
+        @media (max-width: 600px) {
+            .sponsor {
+               /* flex-direction: column;*/
+                align-items: center;
+            }
+            .sponsor li {
+                flex: 1 1 100%;
+                margin: 5px 0;
+                display: flex;
+                justify-content: center;
+            }
+            .sponsor img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        }
